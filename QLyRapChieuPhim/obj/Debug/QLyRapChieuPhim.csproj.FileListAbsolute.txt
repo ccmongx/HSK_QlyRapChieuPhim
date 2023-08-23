@@ -1,0 +1,12 @@
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\bin\Debug\QLyRapChieuPhim.exe.config
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\bin\Debug\QLyRapChieuPhim.exe
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\bin\Debug\QLyRapChieuPhim.pdb
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.AssemblyReference.cache
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.SuggestedBindingRedirects.cache
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.Properties.Resources.resources
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.GenerateResource.cache
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.CoreCompileInputs.cache
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.exe
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.pdb
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.menu.resources
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.Rap.resources
