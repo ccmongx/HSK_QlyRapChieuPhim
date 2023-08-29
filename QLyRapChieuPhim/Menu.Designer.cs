@@ -36,10 +36,13 @@
             this.panel_top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_form.SuspendLayout();
+            this.panel_body.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_form
@@ -58,6 +61,7 @@
             // panel_body
             // 
             this.panel_body.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(252)))), ((int)(((byte)(240)))));
+            this.panel_body.Controls.Add(this.pictureBox2);
             this.panel_body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_body.Location = new System.Drawing.Point(200, 80);
             this.panel_body.Name = "panel_body";
@@ -120,6 +124,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(799, 447);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -130,10 +144,12 @@
             this.Name = "menu";
             this.Text = "Quản Lý Rạp Chiếu Phim";
             this.panel_form.ResumeLayout(false);
+            this.panel_body.ResumeLayout(false);
             this.panel_left.ResumeLayout(false);
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -146,6 +162,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
