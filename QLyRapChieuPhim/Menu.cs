@@ -20,7 +20,7 @@ namespace QLyRapChieuPhim
 
         private Form currentFormChild;
 
-/*        private void OpenChildForm(Form childForm)
+        private void OpenChildForm(Form childForm)
         {
             if (currentFormChild != null)
             {
@@ -34,12 +34,12 @@ namespace QLyRapChieuPhim
             panel_body.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-        }*/
+        }
 
-        private void rapToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Rap rap = new Rap();
-            rap.Show();
+            OpenChildForm(new FrmRap());
+            label1.Text=button1.Text;
         }
     }
 }

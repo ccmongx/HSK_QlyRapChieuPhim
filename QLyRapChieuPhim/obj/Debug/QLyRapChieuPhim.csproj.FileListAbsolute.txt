@@ -9,4 +9,7 @@ H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.C
 H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.exe
 H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.pdb
 H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.menu.resources
-H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.Rap.resources
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\bin\Debug\System.Data.SqlClient.dll
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\bin\Debug\System.Data.SqlClient.xml
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.csproj.CopyComplete
+H:\fithou\HSK\QLyRapChieuPhim\QLyRapChieuPhim\obj\Debug\QLyRapChieuPhim.FrmRap.resources

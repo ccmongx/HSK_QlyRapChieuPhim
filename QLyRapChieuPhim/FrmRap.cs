@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLyRapChieuPhim
 {
-    public partial class Rap : Form
+    public partial class FrmRap : Form
     {
-        public Rap()
+        public FrmRap()
         {
             InitializeComponent();
         }

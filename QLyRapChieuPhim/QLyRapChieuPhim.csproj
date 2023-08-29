@@ -55,11 +55,11 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rap.cs">
+    <Compile Include="FrmRap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Rap.Designer.cs">
-      <DependentUpon>Rap.cs</DependentUpon>
+    <Compile Include="FrmRap.Designer.cs">
+      <DependentUpon>FrmRap.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,9 +74,10 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Rap.resx">
-      <DependentUpon>Rap.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRap.resx">
+      <DependentUpon>FrmRap.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -91,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CGV Cinemas1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
