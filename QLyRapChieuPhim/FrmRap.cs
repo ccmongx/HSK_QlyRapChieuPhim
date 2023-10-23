@@ -163,5 +163,71 @@ namespace QLyRapChieuPhim
             }
             return true;
         }
+
+        private void tbSDT_TextChanged(object sender, EventArgs e)
+        {
+            /*                string input = tbSDT.Text;
+
+                // Sử dụng biểu thức chính quy để kiểm tra số điện thoại
+                string pattern = @"^0[0-9]{10,}$"; // Bắt đầu bằng 0 và có ít nhất 11 số (10 số sau số 0)
+
+                if (Regex.IsMatch(input, pattern))
+                {
+                    errorSDT.Clear(); // Xóa lỗi nếu số điện thoại hợp lệ
+                }
+                else
+                {
+                    errorSDT.SetError(tbSDT, "Số điện thoại không hợp lệ!");
+                }*/
+
+            if (!int.TryParse(tbSDT.Text, out int sdt))
+            {
+                errorSDT.SetError(tbSDT, "Số điện thoại phải là số!");
+            }
+            else if (!(tbSDT.Text.StartsWith("0")))
+            {
+                errorSDT.SetError(tbSDT, "SĐT phải bắt đầu bằng 0!");
+            }
+            else if (tbSDT.Text.Length < 10)
+            {
+                errorSDT.SetError(tbSDT, "SĐT phải có 10 chữ số!");
+            }
+            else
+            {
+                errorSDT.Clear();
+            }
+        }
+
+        private void tbSoPhong_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(tbSoPhong.Text, out int soPhong))
+            {
+                errorSoPhong.SetError(tbSoPhong, "Số phòng phải là số!");
+            }
+            else if (soPhong < 3)
+            {
+                errorSoPhong.SetError(tbSoPhong, "Một rạp phải có ít nhất 3 phòng!");
+            }
+            else
+            {
+                errorSoPhong.Clear();
+            }
+        }
+
+        private void tbTongGhe_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(tbTongGhe.Text, out int tongGhe))
+            {
+                errorTongGhe.SetError(tbTongGhe, "Tổng số ghế phải là số!");
+            }
+            else if (tongGhe < 100)
+            {
+                errorTongGhe.SetError(tbTongGhe, "Tổng số ghế không được ít hơn 100!");
+            }
+            else
+            {
+                errorTongGhe.Clear();
+            }
+        }
     }
 }

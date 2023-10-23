@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tcVe = new System.Windows.Forms.TabControl();
             this.tabRap = new System.Windows.Forms.TabPage();
             this.tbTongGhe = new System.Windows.Forms.TextBox();
@@ -52,10 +53,16 @@
             this.tabGioChieu = new System.Windows.Forms.TabPage();
             this.tabGhe = new System.Windows.Forms.TabPage();
             this.tabVe = new System.Windows.Forms.TabPage();
+            this.errorSDT = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorSoPhong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTongGhe = new System.Windows.Forms.ErrorProvider(this.components);
             this.tcVe.SuspendLayout();
             this.tabRap.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTongGhe)).BeginInit();
             this.SuspendLayout();
             // 
             // tcVe
@@ -104,6 +111,7 @@
             this.tbTongGhe.Name = "tbTongGhe";
             this.tbTongGhe.Size = new System.Drawing.Size(169, 22);
             this.tbTongGhe.TabIndex = 15;
+            this.tbTongGhe.TextChanged += new System.EventHandler(this.tbTongGhe_TextChanged);
             // 
             // tbSoPhong
             // 
@@ -111,6 +119,7 @@
             this.tbSoPhong.Name = "tbSoPhong";
             this.tbSoPhong.Size = new System.Drawing.Size(169, 22);
             this.tbSoPhong.TabIndex = 14;
+            this.tbSoPhong.TextChanged += new System.EventHandler(this.tbSoPhong_TextChanged);
             // 
             // tbSDT
             // 
@@ -118,6 +127,7 @@
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.Size = new System.Drawing.Size(159, 22);
             this.tbSDT.TabIndex = 13;
+            this.tbSDT.TextChanged += new System.EventHandler(this.tbSDT_TextChanged);
             // 
             // tbDiaChi
             // 
@@ -296,6 +306,18 @@
             this.tabVe.Text = "Vé";
             this.tabVe.UseVisualStyleBackColor = true;
             // 
+            // errorSDT
+            // 
+            this.errorSDT.ContainerControl = this;
+            // 
+            // errorSoPhong
+            // 
+            this.errorSoPhong.ContainerControl = this;
+            // 
+            // errorTongGhe
+            // 
+            this.errorTongGhe.ContainerControl = this;
+            // 
             // FrmRap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,6 +333,9 @@
             this.tabRap.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorTongGhe)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,5 +366,8 @@
         private System.Windows.Forms.TextBox tbDiaChi;
         private System.Windows.Forms.TextBox tbTenRap;
         private System.Windows.Forms.TextBox tbMaRap;
+        private System.Windows.Forms.ErrorProvider errorSDT;
+        private System.Windows.Forms.ErrorProvider errorSoPhong;
+        private System.Windows.Forms.ErrorProvider errorTongGhe;
     }
 }
