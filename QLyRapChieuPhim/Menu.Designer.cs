@@ -31,18 +31,26 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menu));
             this.panel_form = new System.Windows.Forms.Panel();
             this.panel_body = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel_left = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel_top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel_form.SuspendLayout();
             this.panel_body.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel_left.SuspendLayout();
             this.panel_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_form
@@ -68,9 +76,27 @@
             this.panel_body.Size = new System.Drawing.Size(798, 446);
             this.panel_body.TabIndex = 2;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(799, 447);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // panel_left
             // 
             this.panel_left.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(252)))), ((int)(((byte)(240)))));
+            this.panel_left.Controls.Add(this.button9);
+            this.panel_left.Controls.Add(this.button8);
+            this.panel_left.Controls.Add(this.button7);
+            this.panel_left.Controls.Add(this.button6);
+            this.panel_left.Controls.Add(this.button5);
+            this.panel_left.Controls.Add(this.button4);
+            this.panel_left.Controls.Add(this.button3);
+            this.panel_left.Controls.Add(this.button2);
             this.panel_left.Controls.Add(this.button1);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_left.Location = new System.Drawing.Point(0, 80);
@@ -124,15 +150,101 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // button2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(799, 447);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.button2.BackColor = System.Drawing.Color.Moccasin;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 46);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(200, 46);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Quản Lý Rạp";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Moccasin;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 92);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 46);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Quản Lý Rạp";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Moccasin;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 138);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 46);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Quản Lý Rạp";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Moccasin;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 184);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(200, 46);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Quản Lý Rạp";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Moccasin;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(0, 230);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(200, 46);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Quản Lý Rạp";
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Moccasin;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(0, 276);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(200, 46);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Quản Lý Rạp";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Moccasin;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(0, 322);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(200, 46);
+            this.button8.TabIndex = 7;
+            this.button8.Text = "Quản Lý Rạp";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Moccasin;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Font = new System.Drawing.Font("UTM American Sans", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Location = new System.Drawing.Point(0, 368);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(200, 46);
+            this.button9.TabIndex = 8;
+            this.button9.Text = "Quản Lý Rạp";
+            this.button9.UseVisualStyleBackColor = false;
             // 
             // menu
             // 
@@ -145,11 +257,11 @@
             this.Text = "Quản Lý Rạp Chiếu Phim";
             this.panel_form.ResumeLayout(false);
             this.panel_body.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel_left.ResumeLayout(false);
             this.panel_top.ResumeLayout(false);
             this.panel_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -163,6 +275,14 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

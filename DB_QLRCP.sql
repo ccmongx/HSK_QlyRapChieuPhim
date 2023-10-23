@@ -1,4 +1,5 @@
-﻿-- Tạo khóa ngoại cho bảng Nhân Viên
+﻿
+-- Tạo khóa ngoại cho bảng Nhân Viên
 ALTER TABLE dbo.tblNhanVien ADD CONSTRAINT FK_NhanVien_Rap
 FOREIGN KEY (sMaRap) REFERENCES dbo.tblRap(sMaRap);
 go
