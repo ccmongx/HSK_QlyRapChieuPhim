@@ -54,9 +54,14 @@ namespace QLyRapChieuPhim
             tbTongGhe.Text = dgvRap.Rows[i].Cells[5].Value.ToString();
         }
 
+        private void FrmRap_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            conn.Close();
+        }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (check())
+            if (checkNull())
             {
                 string sqlInsert = "insert into tblRap values(@sMaRap,@sTenRap,@sDiaChi,@sSDT,@iSoPhong,@iTongSoGhe)";
                 SqlCommand cmd = new SqlCommand(sqlInsert, conn);
@@ -69,11 +74,6 @@ namespace QLyRapChieuPhim
                 cmd.ExecuteNonQuery();
                 GetAllRap();
             }
-        }
-
-        private void FrmRap_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            conn.Close();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -108,7 +108,19 @@ namespace QLyRapChieuPhim
 
         private void btnTim_Click(object sender, EventArgs e)
         {
-            string sqlSearch = "Select * from tblRap  where sMaRap Like '%'+@sMaRap+'%'";
+            string sqlSearch = "SELECT * FROM tblRap WHERE 1=1";
+            if (!string.IsNullOrWhiteSpace(tbMaRap.Text))
+                sqlSearch += " AND sMaRap LIKE '%' + @sMaRap + '%'";
+            if (!string.IsNullOrWhiteSpace(tbTenRap.Text))
+                sqlSearch += " AND sTenRap LIKE '%' + @sTenRap + '%'";
+            if (!string.IsNullOrWhiteSpace(tbDiaChi.Text))
+                sqlSearch += " AND sDiaChi LIKE '%' + @sDiaChi + '%'";
+            if (!string.IsNullOrWhiteSpace(tbSDT.Text))
+                sqlSearch += " AND sSDT LIKE '%' + @sSDT + '%'";
+            if (!string.IsNullOrWhiteSpace(tbSoPhong.Text))
+                sqlSearch += " AND iSoPhong LIKE '%' + @iSoPhong + '%'";
+            if (!string.IsNullOrWhiteSpace(tbTongGhe.Text))
+                sqlSearch += " AND iTongSoGhe LIKE '%' + @iTongSoGhe + '%'";
             SqlCommand cmd = new SqlCommand(sqlSearch, conn);
             cmd.Parameters.AddWithValue("sMaRap", tbMaRap.Text);
             cmd.Parameters.AddWithValue("sTenRap", tbTenRap.Text);
@@ -123,7 +135,7 @@ namespace QLyRapChieuPhim
             dgvRap.DataSource = dt;
         }
 
-        bool check()
+        bool checkNull()
         {
             if (tbMaRap.Text == "")
             {
@@ -162,6 +174,90 @@ namespace QLyRapChieuPhim
                 return false;
             }
             return true;
+        }
+
+        private void tbSDT_TextChanged(object sender, EventArgs e)
+        {
+            /*                string input = tbSDT.Text;
+
+                // Sử dụng biểu thức chính quy để kiểm tra số điện thoại
+                string pattern = @"^0[0-9]{10,}$"; // Bắt đầu bằng 0 và có ít nhất 11 số (10 số sau số 0)
+
+                if (Regex.IsMatch(input, pattern))
+                {
+                    errorSDT.Clear(); // Xóa lỗi nếu số điện thoại hợp lệ
+                }
+                else
+                {
+                    errorSDT.SetError(tbSDT, "Số điện thoại không hợp lệ!");
+                }*/
+
+            if (!int.TryParse(tbSDT.Text, out int sdt))
+            {
+                errorSDT.SetError(tbSDT, "Số điện thoại phải là số!");
+            }
+            else if (!(tbSDT.Text.StartsWith("0")))
+            {
+                errorSDT.SetError(tbSDT, "SĐT phải bắt đầu bằng 0!");
+            }
+            else if (tbSDT.Text.Length < 10)
+            {
+                errorSDT.SetError(tbSDT, "SĐT phải có 10 chữ số!");
+            }
+            else
+            {
+                errorSDT.Clear();
+            }
+        }
+
+        private void tbSoPhong_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(tbSoPhong.Text, out int soPhong))
+            {
+                errorSoPhong.SetError(tbSoPhong, "Số phòng phải là số!");
+            }
+            else if (soPhong < 3)
+            {
+                errorSoPhong.SetError(tbSoPhong, "Một rạp phải có ít nhất 3 phòng!");
+            }
+            else
+            {
+                errorSoPhong.Clear();
+            }
+        }
+
+        private void tbTongGhe_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(tbTongGhe.Text, out int tongGhe))
+            {
+                errorTongGhe.SetError(tbTongGhe, "Tổng số ghế phải là số!");
+            }
+            else if (tongGhe < 100)
+            {
+                errorTongGhe.SetError(tbTongGhe, "Tổng số ghế không được ít hơn 100!");
+            }
+            else
+            {
+                errorTongGhe.Clear();
+            }
+        }
+
+        private bool isMaRapExists(string maRap)
+        {
+            string sqlCheck = "SELECT COUNT(*) FROM tblRap WHERE sMaRap = @sMaRap";
+            SqlCommand cmd = new SqlCommand(sqlCheck, conn);
+            cmd.Parameters.AddWithValue("sMaRap", maRap);
+            int count = (int)cmd.ExecuteScalar();
+            return count > 0;
+        }
+
+        private void tbMaRap_TextChanged(object sender, EventArgs e)
+        {
+            string maRap = tbMaRap.Text;
+            if (isMaRapExists(maRap))
+            {
+                errorMaRap.SetError(tbMaRap, "Mã rạp đã tồn tại!");
+            }
         }
     }
 }
