@@ -347,6 +347,25 @@ namespace QLyRapChieuPhim
             return true;
         }
 
+        private bool isMaPhongExists(string maPhong)
+        {
+            string sqlCheck = "SELECT COUNT(*) FROM tblPhongChieu WHERE sMaPhong=@sMaPhong";
+            SqlCommand cmd = new SqlCommand(sqlCheck, conn);
+            cmd.Parameters.AddWithValue("sMaPhong", maPhong);
+            int count = (int)cmd.ExecuteScalar();
+            return count > 0;
+        }
+
+        private void tbMaPhong_TextChanged(object sender, EventArgs e)
+        {
+            string maPhong = tbMaPhong.Text;
+            if (isMaPhongExists(maPhong))
+            {
+                errorMaPhong.SetError(tbMaPhong, "Mã phòng đã tồn tại!");
+            }
+        }
+
+
         // Function
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
@@ -427,6 +446,23 @@ namespace QLyRapChieuPhim
             tbTenPhong.Text = "";
             tbTongGheP.Text = "";
             cbMaRap.Text = "";
+        }
+
+        private void tbTongGheP_TextChanged(object sender, EventArgs e)
+        {
+            if (!int.TryParse(tbTongGheP.Text, out int tongGhe))
+            {
+                errorTongGheP.SetError(tbTongGheP, "Tổng số ghế phải là số!");
+            }
+            else if (tongGhe < 100)
+            {
+                errorTongGheP.SetError(tbTongGheP, "Tổng số ghế không được ít hơn 100!");
+            }
+            else
+            {
+                errorTongGheP.Clear();
+            }
+
         }
     }
 }

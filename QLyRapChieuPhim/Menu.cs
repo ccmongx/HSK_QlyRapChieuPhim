@@ -39,7 +39,16 @@ namespace QLyRapChieuPhim
         private void button1_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmRap());
-            label1.Text=button1.Text;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmPhim());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmNV());
         }
     }
 }

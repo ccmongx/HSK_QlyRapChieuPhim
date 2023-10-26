@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNV.Designer.cs">
+      <DependentUpon>FrmNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPhim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPhim.Designer.cs">
+      <DependentUpon>FrmPhim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
