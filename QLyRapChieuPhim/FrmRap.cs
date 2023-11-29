@@ -159,6 +159,25 @@ namespace QLyRapChieuPhim
             tbSoPhong.Text = "";
         }
 
+        private void btnInRap_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand lenh = new SqlCommand("select * from tblRap", conn);
+            lenh.CommandText = "select * from tblRap";
+            lenh.Parameters.Clear();
+            lenh.Parameters.AddWithValue("@MaRap", tbMaRap.Text);
+            da.SelectCommand = lenh;
+            DataTable dt = new DataTable("in");
+            da.Fill(dt);
+            crRap crRap = new crRap();
+            crRap.SetDataSource(dt);
+            rptRapfrm f = new rptRapfrm();
+            
+            f.crystalReportViewer1.ReportSource = crRap;
+            f.ShowDialog();
+
+        }
+
         // Validate
         bool checkNullRap()
         {
@@ -464,5 +483,7 @@ namespace QLyRapChieuPhim
             }
 
         }
+
+        
     }
 }

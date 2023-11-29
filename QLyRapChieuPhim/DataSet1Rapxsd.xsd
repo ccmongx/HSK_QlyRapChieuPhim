@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1Rapxsd" targetNamespace="http://tempuri.org/DataSet1Rapxsd.xsd" xmlns:mstns="http://tempuri.org/DataSet1Rapxsd.xsd" xmlns="http://tempuri.org/DataSet1Rapxsd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1Rapxsd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1Rapxsd" msprop:Generator_DataSetName="DataSet1Rapxsd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="tblRap" msprop:Generator_RowEvHandlerName="tblRapRowChangeEventHandler" msprop:Generator_RowDeletedName="tblRapRowDeleted" msprop:Generator_RowDeletingName="tblRapRowDeleting" msprop:Generator_RowEvArgName="tblRapRowChangeEvent" msprop:Generator_TablePropName="tblRap" msprop:Generator_RowChangedName="tblRapRowChanged" msprop:Generator_RowChangingName="tblRapRowChanging" msprop:Generator_TableClassName="tblRapDataTable" msprop:Generator_RowClassName="tblRapRow" msprop:Generator_TableVarName="tabletblRap" msprop:Generator_UserTableName="tblRap">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sMaRap" msprop:Generator_ColumnPropNameInRow="sMaRap" msprop:Generator_ColumnPropNameInTable="sMaRapColumn" msprop:Generator_ColumnVarNameInTable="columnsMaRap" msprop:Generator_UserColumnName="sMaRap" type="xs:string" minOccurs="0" />
+              <xs:element name="sTenRap" msprop:Generator_ColumnPropNameInRow="sTenRap" msprop:Generator_ColumnPropNameInTable="sTenRapColumn" msprop:Generator_ColumnVarNameInTable="columnsTenRap" msprop:Generator_UserColumnName="sTenRap" type="xs:string" minOccurs="0" />
+              <xs:element name="sDiaChi" msprop:Generator_ColumnPropNameInRow="sDiaChi" msprop:Generator_ColumnPropNameInTable="sDiaChiColumn" msprop:Generator_ColumnVarNameInTable="columnsDiaChi" msprop:Generator_UserColumnName="sDiaChi" type="xs:string" minOccurs="0" />
+              <xs:element name="iSoPhong" msprop:Generator_ColumnPropNameInRow="iSoPhong" msprop:Generator_ColumnPropNameInTable="iSoPhongColumn" msprop:Generator_ColumnVarNameInTable="columniSoPhong" msprop:Generator_UserColumnName="iSoPhong" type="xs:int" minOccurs="0" />
+              <xs:element name="iTongGhe" msprop:Generator_ColumnPropNameInRow="iTongGhe" msprop:Generator_ColumnPropNameInTable="iTongGheColumn" msprop:Generator_ColumnVarNameInTable="columniTongGhe" msprop:Generator_UserColumnName="iTongGhe" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

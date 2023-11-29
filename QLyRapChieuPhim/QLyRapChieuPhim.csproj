@@ -33,12 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,6 +56,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="crRap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>crRap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1Rapxsd.cs">
+      <DependentUpon>DataSet1Rapxsd.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1Rapxsd.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1Rapxsd.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FrmNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +96,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptRapfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rptRapfrm.Designer.cs">
+      <DependentUpon>rptRapfrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="crRap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>crRap.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +122,20 @@
     <EmbeddedResource Include="FrmRap.resx">
       <DependentUpon>FrmRap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptRapfrm.resx">
+      <DependentUpon>rptRapfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet1Rapxsd.xsc">
+      <DependentUpon>DataSet1Rapxsd.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1Rapxsd.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1Rapxsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1Rapxsd.xss">
+      <DependentUpon>DataSet1Rapxsd.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -111,6 +155,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CGV Cinemas1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,15 +67,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
             this.tabGioChieu = new System.Windows.Forms.TabPage();
-            this.tabGhe = new System.Windows.Forms.TabPage();
-            this.tabVe = new System.Windows.Forms.TabPage();
-            this.errorSDT = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorSoPhong = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorTongGheR = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMaRap = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMaPhong = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorTongGheP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorMaRapP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -88,7 +80,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.tabGhe = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -104,21 +96,30 @@
             this.button10 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.tabVe = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.errorSDT = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorSoPhong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTongGheR = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorMaRap = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorMaPhong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorTongGheP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorMaRapP = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnInRap = new System.Windows.Forms.Button();
             this.tcVe.SuspendLayout();
             this.tabRap.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -127,8 +128,14 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.tabGioChieu.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabGhe.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabVe.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheR)).BeginInit();
@@ -136,12 +143,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorMaPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMaRapP)).BeginInit();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tcVe
@@ -159,6 +160,7 @@
             // 
             // tabRap
             // 
+            this.tabRap.Controls.Add(this.btnInRap);
             this.tabRap.Controls.Add(this.btnReset);
             this.tabRap.Controls.Add(this.tbTongGhe);
             this.tabRap.Controls.Add(this.tbSoPhong);
@@ -187,7 +189,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(572, 93);
+            this.btnReset.Location = new System.Drawing.Point(547, 93);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 16;
@@ -297,7 +299,7 @@
             // 
             // btnTimRap
             // 
-            this.btnTimRap.Location = new System.Drawing.Point(434, 93);
+            this.btnTimRap.Location = new System.Drawing.Point(416, 93);
             this.btnTimRap.Name = "btnTimRap";
             this.btnTimRap.Size = new System.Drawing.Size(75, 23);
             this.btnTimRap.TabIndex = 4;
@@ -307,7 +309,7 @@
             // 
             // btnXoaRap
             // 
-            this.btnXoaRap.Location = new System.Drawing.Point(293, 93);
+            this.btnXoaRap.Location = new System.Drawing.Point(285, 93);
             this.btnXoaRap.Name = "btnXoaRap";
             this.btnXoaRap.Size = new System.Drawing.Size(75, 23);
             this.btnXoaRap.TabIndex = 3;
@@ -542,81 +544,13 @@
             this.tabGioChieu.Text = "Giờ Chiếu";
             this.tabGioChieu.UseVisualStyleBackColor = true;
             // 
-            // tabGhe
+            // dateTimePicker1
             // 
-            this.tabGhe.Controls.Add(this.button6);
-            this.tabGhe.Controls.Add(this.comboBox2);
-            this.tabGhe.Controls.Add(this.textBox1);
-            this.tabGhe.Controls.Add(this.textBox2);
-            this.tabGhe.Controls.Add(this.textBox4);
-            this.tabGhe.Controls.Add(this.label12);
-            this.tabGhe.Controls.Add(this.label14);
-            this.tabGhe.Controls.Add(this.label15);
-            this.tabGhe.Controls.Add(this.label16);
-            this.tabGhe.Controls.Add(this.button7);
-            this.tabGhe.Controls.Add(this.button8);
-            this.tabGhe.Controls.Add(this.button9);
-            this.tabGhe.Controls.Add(this.button10);
-            this.tabGhe.Controls.Add(this.panel4);
-            this.tabGhe.Location = new System.Drawing.Point(4, 25);
-            this.tabGhe.Name = "tabGhe";
-            this.tabGhe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabGhe.Size = new System.Drawing.Size(771, 396);
-            this.tabGhe.TabIndex = 3;
-            this.tabGhe.Text = "Ghế";
-            this.tabGhe.UseVisualStyleBackColor = true;
-            // 
-            // tabVe
-            // 
-            this.tabVe.Controls.Add(this.button11);
-            this.tabVe.Controls.Add(this.comboBox3);
-            this.tabVe.Controls.Add(this.textBox5);
-            this.tabVe.Controls.Add(this.textBox6);
-            this.tabVe.Controls.Add(this.textBox7);
-            this.tabVe.Controls.Add(this.label17);
-            this.tabVe.Controls.Add(this.label18);
-            this.tabVe.Controls.Add(this.label19);
-            this.tabVe.Controls.Add(this.label20);
-            this.tabVe.Controls.Add(this.button12);
-            this.tabVe.Controls.Add(this.button13);
-            this.tabVe.Controls.Add(this.button14);
-            this.tabVe.Controls.Add(this.button15);
-            this.tabVe.Controls.Add(this.panel5);
-            this.tabVe.Location = new System.Drawing.Point(4, 25);
-            this.tabVe.Name = "tabVe";
-            this.tabVe.Padding = new System.Windows.Forms.Padding(3);
-            this.tabVe.Size = new System.Drawing.Size(771, 396);
-            this.tabVe.TabIndex = 4;
-            this.tabVe.Text = "Vé";
-            this.tabVe.UseVisualStyleBackColor = true;
-            // 
-            // errorSDT
-            // 
-            this.errorSDT.ContainerControl = this;
-            // 
-            // errorSoPhong
-            // 
-            this.errorSoPhong.ContainerControl = this;
-            // 
-            // errorTongGheR
-            // 
-            this.errorTongGheR.ContainerControl = this;
-            // 
-            // errorMaRap
-            // 
-            this.errorMaRap.ContainerControl = this;
-            // 
-            // errorMaPhong
-            // 
-            this.errorMaPhong.ContainerControl = this;
-            // 
-            // errorTongGheP
-            // 
-            this.errorTongGheP.ContainerControl = this;
-            // 
-            // errorMaRapP
-            // 
-            this.errorMaRapP.ContainerControl = this;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dateTimePicker1.Location = new System.Drawing.Point(541, 33);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(127, 22);
+            this.dateTimePicker1.TabIndex = 49;
             // 
             // button1
             // 
@@ -726,13 +660,29 @@
             this.dataGridView1.Size = new System.Drawing.Size(771, 275);
             this.dataGridView1.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // tabGhe
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(541, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 22);
-            this.dateTimePicker1.TabIndex = 49;
+            this.tabGhe.Controls.Add(this.button6);
+            this.tabGhe.Controls.Add(this.comboBox2);
+            this.tabGhe.Controls.Add(this.textBox1);
+            this.tabGhe.Controls.Add(this.textBox2);
+            this.tabGhe.Controls.Add(this.textBox4);
+            this.tabGhe.Controls.Add(this.label12);
+            this.tabGhe.Controls.Add(this.label14);
+            this.tabGhe.Controls.Add(this.label15);
+            this.tabGhe.Controls.Add(this.label16);
+            this.tabGhe.Controls.Add(this.button7);
+            this.tabGhe.Controls.Add(this.button8);
+            this.tabGhe.Controls.Add(this.button9);
+            this.tabGhe.Controls.Add(this.button10);
+            this.tabGhe.Controls.Add(this.panel4);
+            this.tabGhe.Location = new System.Drawing.Point(4, 25);
+            this.tabGhe.Name = "tabGhe";
+            this.tabGhe.Padding = new System.Windows.Forms.Padding(3);
+            this.tabGhe.Size = new System.Drawing.Size(771, 396);
+            this.tabGhe.TabIndex = 3;
+            this.tabGhe.Text = "Ghế";
+            this.tabGhe.UseVisualStyleBackColor = true;
             // 
             // button6
             // 
@@ -865,6 +815,30 @@
             this.dataGridView2.Size = new System.Drawing.Size(771, 275);
             this.dataGridView2.TabIndex = 0;
             // 
+            // tabVe
+            // 
+            this.tabVe.Controls.Add(this.button11);
+            this.tabVe.Controls.Add(this.comboBox3);
+            this.tabVe.Controls.Add(this.textBox5);
+            this.tabVe.Controls.Add(this.textBox6);
+            this.tabVe.Controls.Add(this.textBox7);
+            this.tabVe.Controls.Add(this.label17);
+            this.tabVe.Controls.Add(this.label18);
+            this.tabVe.Controls.Add(this.label19);
+            this.tabVe.Controls.Add(this.label20);
+            this.tabVe.Controls.Add(this.button12);
+            this.tabVe.Controls.Add(this.button13);
+            this.tabVe.Controls.Add(this.button14);
+            this.tabVe.Controls.Add(this.button15);
+            this.tabVe.Controls.Add(this.panel5);
+            this.tabVe.Location = new System.Drawing.Point(4, 25);
+            this.tabVe.Name = "tabVe";
+            this.tabVe.Padding = new System.Windows.Forms.Padding(3);
+            this.tabVe.Size = new System.Drawing.Size(771, 396);
+            this.tabVe.TabIndex = 4;
+            this.tabVe.Text = "Vé";
+            this.tabVe.UseVisualStyleBackColor = true;
+            // 
             // button11
             // 
             this.button11.Location = new System.Drawing.Point(581, 85);
@@ -896,6 +870,13 @@
             this.textBox6.Size = new System.Drawing.Size(156, 22);
             this.textBox6.TabIndex = 59;
             // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(154, 8);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(156, 22);
+            this.textBox7.TabIndex = 58;
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -922,6 +903,15 @@
             this.label19.Size = new System.Drawing.Size(54, 16);
             this.label19.TabIndex = 55;
             this.label19.Text = "Mã Ghế";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(80, 11);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(68, 16);
+            this.label20.TabIndex = 50;
+            this.label20.Text = "Mã Phòng";
             // 
             // button12
             // 
@@ -980,21 +970,43 @@
             this.dataGridView3.Size = new System.Drawing.Size(771, 275);
             this.dataGridView3.TabIndex = 0;
             // 
-            // label20
+            // errorSDT
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(80, 11);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 16);
-            this.label20.TabIndex = 50;
-            this.label20.Text = "Mã Phòng";
+            this.errorSDT.ContainerControl = this;
             // 
-            // textBox7
+            // errorSoPhong
             // 
-            this.textBox7.Location = new System.Drawing.Point(154, 8);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(156, 22);
-            this.textBox7.TabIndex = 58;
+            this.errorSoPhong.ContainerControl = this;
+            // 
+            // errorTongGheR
+            // 
+            this.errorTongGheR.ContainerControl = this;
+            // 
+            // errorMaRap
+            // 
+            this.errorMaRap.ContainerControl = this;
+            // 
+            // errorMaPhong
+            // 
+            this.errorMaPhong.ContainerControl = this;
+            // 
+            // errorTongGheP
+            // 
+            this.errorTongGheP.ContainerControl = this;
+            // 
+            // errorMaRapP
+            // 
+            this.errorMaRapP.ContainerControl = this;
+            // 
+            // btnInRap
+            // 
+            this.btnInRap.Location = new System.Drawing.Point(666, 93);
+            this.btnInRap.Name = "btnInRap";
+            this.btnInRap.Size = new System.Drawing.Size(75, 23);
+            this.btnInRap.TabIndex = 17;
+            this.btnInRap.Text = "In";
+            this.btnInRap.UseVisualStyleBackColor = true;
+            this.btnInRap.Click += new System.EventHandler(this.btnInRap_Click);
             // 
             // FrmRap
             // 
@@ -1017,10 +1029,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).EndInit();
             this.tabGioChieu.ResumeLayout(false);
             this.tabGioChieu.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabGhe.ResumeLayout(false);
             this.tabGhe.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabVe.ResumeLayout(false);
             this.tabVe.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheR)).EndInit();
@@ -1028,12 +1046,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorMaPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorMaRapP)).EndInit();
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1130,5 +1142,6 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.Button btnInRap;
     }
 }
