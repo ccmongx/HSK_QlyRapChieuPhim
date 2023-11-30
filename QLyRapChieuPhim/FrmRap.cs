@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using QLyRapChieuPhim.Properties;
 using System.Configuration;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace QLyRapChieuPhim
@@ -32,7 +33,12 @@ namespace QLyRapChieuPhim
             dgvPhong.AutoSizeColumnsMode= DataGridViewAutoSizeColumnsMode.Fill;
             GetAllRap();
             GetAllPhong();
+            GetAllGioChieu();
+            GetAllGhe();
             hiencombobox();
+            hiencomboboxGC();
+            hiencomboboxGhe();
+            hiencomboboxVe();
         }
         private void FrmRap_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -64,7 +70,7 @@ namespace QLyRapChieuPhim
             tbTongGhe.Text = dgvRap.Rows[i].Cells[5].Value.ToString();
         }
 
-        // Function
+        // Functions
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (checkNullRap())
@@ -385,7 +391,7 @@ namespace QLyRapChieuPhim
         }
 
 
-        // Function
+        // Functions
         private void btnThemPhong_Click(object sender, EventArgs e)
         {
             if (checkNullPhong())
@@ -395,9 +401,11 @@ namespace QLyRapChieuPhim
                 cmd.Parameters.AddWithValue("sMaPhong", tbMaPhong.Text);
                 cmd.Parameters.AddWithValue("iTenPhong", tbTenPhong.Text);
                 cmd.Parameters.AddWithValue("iTongSoGhe", tbTongGheP.Text);
+                cmd.Parameters.AddWithValue("sMaRap", cbMaRap.Text);
                 cmd.ExecuteNonQuery();
                 GetAllPhong();
                 GetAllRap();
+                GetAllGioChieu();
             }
 
         }
@@ -484,6 +492,186 @@ namespace QLyRapChieuPhim
 
         }
 
-        
+
+// Giờ chiếu ----------------------------------------------------------------------------------------------------------------------
+        // Load data dgv
+        public void GetAllGioChieu()
+        {
+            string sqlSelect = "select * from tblGioChieu";
+            SqlCommand cmd = new SqlCommand(sqlSelect, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvGioChieu.DataSource = dt;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int i;
+            i = dgvGioChieu.CurrentRow.Index;
+            tbMaGioChieu.Text = dgvGioChieu.Rows[i].Cells[0].Value.ToString();
+            cbMaRapGC.Text = dgvGioChieu.Rows[i].Cells[1].Value.ToString();
+            timeGC.Text = dgvGioChieu.Rows[i].Cells[2].Value.ToString();
+        }
+
+
+        // Load data combobox
+        private void hiencomboboxGC()
+        {
+            DataTable t = layDSMR();
+            DataView v = new DataView(t);
+            v.Sort = "sMaRap";
+            cbMaRapGC.DataSource = v;
+            cbMaRapGC.DisplayMember = "sMaRap";
+            cbMaRapGC.ValueMember = "sMaRap";
+        }
+
+
+        // Validate
+        bool checkNullGC()
+        {
+            if (tbMaGioChieu.Text == "")
+            {
+                MessageBox.Show("KHÔNG ĐƯỢC ĐỂ TRỐNG!", "Thông Báo");
+                tbMaPhong.Focus();
+                return false;
+            }
+            return true;
+        }
+
+
+        // Functions
+        private void btn_ThemGC_Click(object sender, EventArgs e)
+        {
+            if (checkNullGC())
+            {
+                string sqlInsert = "insert into tblGioChieu values(@sMaGioChieu,@sMaRap,@tGioChieu)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, conn);
+                cmd.Parameters.AddWithValue("sMaGioChieu", tbMaGioChieu.Text);
+                cmd.Parameters.AddWithValue("sMaRap", cbMaRapGC.Text);
+                cmd.Parameters.AddWithValue("tGioChieu", timeGC.Text);
+                cmd.ExecuteNonQuery();
+                GetAllPhong();
+                GetAllRap();
+                GetAllGioChieu();
+            }
+
+        }
+
+
+// Ghế ----------------------------------------------------------------------------------------------------------------------
+        // Load data dgv
+        public void GetAllGhe()
+        {
+            string sqlSelect = "select * from tblTrangThaiGhe";
+            SqlCommand cmd = new SqlCommand(sqlSelect, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvGhe.DataSource = dt;
+        }
+
+        private void dgvGhe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        // Load data combobox
+        private void hiencomboboxGhe()
+        {
+            DataTable t = layDSMR();
+            DataView v = new DataView(t);
+            v.Sort = "sMaRap";
+            cbMaRapGhe.DataSource = v;
+            cbMaRapGhe.DisplayMember = "sMaRap";
+            cbMaRapGhe.ValueMember = "sMaRap";
+        }
+
+        // Validate
+        bool checkNullGhe()
+        {
+            if (tbMaGhe.Text == "")
+            {
+                MessageBox.Show("KHÔNG ĐƯỢC ĐỂ TRỐNG!", "Thông Báo");
+                tbMaPhong.Focus();
+                return false;
+            }
+            if (tbMaPhongGhe.Text == "")
+            {
+                MessageBox.Show("KHÔNG ĐƯỢC ĐỂ TRỐNG!", "Thông Báo");
+                tbMaPhong.Focus();
+                return false;
+            }
+            return true;
+        }
+
+
+        // Functions
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (checkNullGhe())
+            {
+                string sqlInsert = "insert into tblTrangThaiGhe values(@sMaPhong,@sMaGhe,@sTrangThai,@sMaRap)";
+                SqlCommand cmd = new SqlCommand(sqlInsert, conn);
+                cmd.Parameters.AddWithValue("sMaPhong", tbMaPhongGhe.Text);
+                cmd.Parameters.AddWithValue("sMaGhe", tbMaGhe.Text);
+                cmd.Parameters.AddWithValue("sTrangThai", cbTrangThaiGhe.Text);
+                cmd.Parameters.AddWithValue("sMaRap", cbMaRapGhe.Text);
+                cmd.ExecuteNonQuery();
+                GetAllPhong();
+                GetAllRap();
+                GetAllGioChieu();
+                GetAllGhe();
+            }
+
+        }
+
+
+// Vé ----------------------------------------------------------------------------------------------------------------------
+        // Load data dgv
+        public void GetAllVe()
+        {
+            string sqlSelect = "select * from tblVe";
+            SqlCommand cmd = new SqlCommand(sqlSelect, conn);
+            SqlDataReader dr = cmd.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            dgvVe.DataSource = dt;
+        }
+
+        private void dgvVe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        // Load data combobox
+        private DataTable layDSMG()
+        {
+            string conString = ConfigurationManager.ConnectionStrings["QLRP"].ConnectionString.ToString();
+            using (SqlConnection cnn = new SqlConnection(conString))
+            {
+                using (SqlCommand cmd = new SqlCommand("select*from tblTrangThaiGhe", cnn))
+                {
+                    cmd.CommandType = CommandType.Text;
+                    using (SqlDataAdapter ad = new SqlDataAdapter(cmd))
+                    {
+                        DataTable tb = new DataTable();
+                        ad.Fill(tb);
+                        return tb;
+                    }
+                }
+            }
+        }
+        private void hiencomboboxVe()
+        {
+            DataTable t = layDSMG();
+            DataView v = new DataView(t);
+            v.Sort = "sMaGhe";
+            cbMaGhe.DataSource = v;
+            cbMaGhe.DisplayMember = "sMaGhe";
+            cbMaGhe.ValueMember = "sMaGhe";
+        }
+
+
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.tcVe = new System.Windows.Forms.TabControl();
             this.tabRap = new System.Windows.Forms.TabPage();
+            this.btnInRap = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.tbTongGhe = new System.Windows.Forms.TextBox();
             this.tbSoPhong = new System.Windows.Forms.TextBox();
@@ -67,25 +68,24 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvPhong = new System.Windows.Forms.DataGridView();
             this.tabGioChieu = new System.Windows.Forms.TabPage();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.timeGC = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbMaRapGC = new System.Windows.Forms.ComboBox();
+            this.tbMaGioChieu = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btn_ThemGC = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvGioChieu = new System.Windows.Forms.DataGridView();
             this.tabGhe = new System.Windows.Forms.TabPage();
             this.button6 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.cbMaRapGhe = new System.Windows.Forms.ComboBox();
+            this.tbMaGhe = new System.Windows.Forms.TextBox();
+            this.tbMaPhongGhe = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -93,25 +93,20 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btn_ThemGhe = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgvGhe = new System.Windows.Forms.DataGridView();
             this.tabVe = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgvVe = new System.Windows.Forms.DataGridView();
             this.errorSDT = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorSoPhong = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTongGheR = new System.Windows.Forms.ErrorProvider(this.components);
@@ -119,7 +114,8 @@
             this.errorMaPhong = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorTongGheP = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorMaRapP = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnInRap = new System.Windows.Forms.Button();
+            this.cbTrangThaiGhe = new System.Windows.Forms.ComboBox();
+            this.cbMaGhe = new System.Windows.Forms.ComboBox();
             this.tcVe.SuspendLayout();
             this.tabRap.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,13 +125,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhong)).BeginInit();
             this.tabGioChieu.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioChieu)).BeginInit();
             this.tabGhe.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGhe)).BeginInit();
             this.tabVe.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheR)).BeginInit();
@@ -186,6 +182,16 @@
             this.tabRap.TabIndex = 0;
             this.tabRap.Text = "Rạp";
             this.tabRap.UseVisualStyleBackColor = true;
+            // 
+            // btnInRap
+            // 
+            this.btnInRap.Location = new System.Drawing.Point(666, 93);
+            this.btnInRap.Name = "btnInRap";
+            this.btnInRap.Size = new System.Drawing.Size(75, 23);
+            this.btnInRap.TabIndex = 17;
+            this.btnInRap.Text = "In";
+            this.btnInRap.UseVisualStyleBackColor = true;
+            this.btnInRap.Click += new System.EventHandler(this.btnInRap_Click);
             // 
             // btnReset
             // 
@@ -524,17 +530,17 @@
             // 
             // tabGioChieu
             // 
-            this.tabGioChieu.Controls.Add(this.dateTimePicker1);
+            this.tabGioChieu.Controls.Add(this.timeGC);
             this.tabGioChieu.Controls.Add(this.button1);
-            this.tabGioChieu.Controls.Add(this.comboBox1);
-            this.tabGioChieu.Controls.Add(this.textBox3);
+            this.tabGioChieu.Controls.Add(this.cbMaRapGC);
+            this.tabGioChieu.Controls.Add(this.tbMaGioChieu);
             this.tabGioChieu.Controls.Add(this.label8);
             this.tabGioChieu.Controls.Add(this.label9);
             this.tabGioChieu.Controls.Add(this.label13);
             this.tabGioChieu.Controls.Add(this.button2);
             this.tabGioChieu.Controls.Add(this.button3);
             this.tabGioChieu.Controls.Add(this.button4);
-            this.tabGioChieu.Controls.Add(this.button5);
+            this.tabGioChieu.Controls.Add(this.btn_ThemGC);
             this.tabGioChieu.Controls.Add(this.panel3);
             this.tabGioChieu.Location = new System.Drawing.Point(4, 25);
             this.tabGioChieu.Name = "tabGioChieu";
@@ -544,13 +550,13 @@
             this.tabGioChieu.Text = "Giờ Chiếu";
             this.tabGioChieu.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // timeGC
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(541, 33);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(127, 22);
-            this.dateTimePicker1.TabIndex = 49;
+            this.timeGC.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.timeGC.Location = new System.Drawing.Point(541, 33);
+            this.timeGC.Name = "timeGC";
+            this.timeGC.Size = new System.Drawing.Size(127, 22);
+            this.timeGC.TabIndex = 49;
             // 
             // button1
             // 
@@ -561,20 +567,20 @@
             this.button1.Text = "Reset";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbMaRapGC
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(312, 33);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 47;
+            this.cbMaRapGC.FormattingEnabled = true;
+            this.cbMaRapGC.Location = new System.Drawing.Point(312, 33);
+            this.cbMaRapGC.Name = "cbMaRapGC";
+            this.cbMaRapGC.Size = new System.Drawing.Size(121, 24);
+            this.cbMaRapGC.TabIndex = 47;
             // 
-            // textBox3
+            // tbMaGioChieu
             // 
-            this.textBox3.Location = new System.Drawing.Point(112, 35);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(83, 22);
-            this.textBox3.TabIndex = 44;
+            this.tbMaGioChieu.Location = new System.Drawing.Point(112, 35);
+            this.tbMaGioChieu.Name = "tbMaGioChieu";
+            this.tbMaGioChieu.Size = new System.Drawing.Size(83, 22);
+            this.tbMaGioChieu.TabIndex = 44;
             // 
             // label8
             // 
@@ -630,43 +636,45 @@
             this.button4.Text = "Sửa";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_ThemGC
             // 
-            this.button5.Location = new System.Drawing.Point(34, 85);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 37;
-            this.button5.Text = "Thêm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_ThemGC.Location = new System.Drawing.Point(34, 85);
+            this.btn_ThemGC.Name = "btn_ThemGC";
+            this.btn_ThemGC.Size = new System.Drawing.Size(75, 23);
+            this.btn_ThemGC.TabIndex = 37;
+            this.btn_ThemGC.Text = "Thêm";
+            this.btn_ThemGC.UseVisualStyleBackColor = true;
+            this.btn_ThemGC.Click += new System.EventHandler(this.btn_ThemGC_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dgvGioChieu);
             this.panel3.Location = new System.Drawing.Point(1, 114);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(768, 275);
             this.panel3.TabIndex = 35;
             // 
-            // dataGridView1
+            // dgvGioChieu
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvGioChieu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(771, 275);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvGioChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGioChieu.Location = new System.Drawing.Point(0, 0);
+            this.dgvGioChieu.Name = "dgvGioChieu";
+            this.dgvGioChieu.RowHeadersWidth = 51;
+            this.dgvGioChieu.RowTemplate.Height = 24;
+            this.dgvGioChieu.Size = new System.Drawing.Size(771, 275);
+            this.dgvGioChieu.TabIndex = 0;
+            this.dgvGioChieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // tabGhe
             // 
+            this.tabGhe.Controls.Add(this.cbTrangThaiGhe);
             this.tabGhe.Controls.Add(this.button6);
-            this.tabGhe.Controls.Add(this.comboBox2);
-            this.tabGhe.Controls.Add(this.textBox1);
-            this.tabGhe.Controls.Add(this.textBox2);
-            this.tabGhe.Controls.Add(this.textBox4);
+            this.tabGhe.Controls.Add(this.cbMaRapGhe);
+            this.tabGhe.Controls.Add(this.tbMaGhe);
+            this.tabGhe.Controls.Add(this.tbMaPhongGhe);
             this.tabGhe.Controls.Add(this.label12);
             this.tabGhe.Controls.Add(this.label14);
             this.tabGhe.Controls.Add(this.label15);
@@ -674,7 +682,7 @@
             this.tabGhe.Controls.Add(this.button7);
             this.tabGhe.Controls.Add(this.button8);
             this.tabGhe.Controls.Add(this.button9);
-            this.tabGhe.Controls.Add(this.button10);
+            this.tabGhe.Controls.Add(this.btn_ThemGhe);
             this.tabGhe.Controls.Add(this.panel4);
             this.tabGhe.Location = new System.Drawing.Point(4, 25);
             this.tabGhe.Name = "tabGhe";
@@ -693,34 +701,27 @@
             this.button6.Text = "Reset";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // comboBox2
+            // cbMaRapGhe
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(494, 35);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 47;
+            this.cbMaRapGhe.FormattingEnabled = true;
+            this.cbMaRapGhe.Location = new System.Drawing.Point(494, 35);
+            this.cbMaRapGhe.Name = "cbMaRapGhe";
+            this.cbMaRapGhe.Size = new System.Drawing.Size(121, 24);
+            this.cbMaRapGhe.TabIndex = 47;
             // 
-            // textBox1
+            // tbMaGhe
             // 
-            this.textBox1.Location = new System.Drawing.Point(494, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 22);
-            this.textBox1.TabIndex = 46;
+            this.tbMaGhe.Location = new System.Drawing.Point(154, 38);
+            this.tbMaGhe.Name = "tbMaGhe";
+            this.tbMaGhe.Size = new System.Drawing.Size(156, 22);
+            this.tbMaGhe.TabIndex = 45;
             // 
-            // textBox2
+            // tbMaPhongGhe
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 22);
-            this.textBox2.TabIndex = 45;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(154, 8);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(156, 22);
-            this.textBox4.TabIndex = 44;
+            this.tbMaPhongGhe.Location = new System.Drawing.Point(154, 8);
+            this.tbMaPhongGhe.Name = "tbMaPhongGhe";
+            this.tbMaPhongGhe.Size = new System.Drawing.Size(156, 22);
+            this.tbMaPhongGhe.TabIndex = 44;
             // 
             // label12
             // 
@@ -785,47 +786,45 @@
             this.button9.Text = "Sửa";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btn_ThemGhe
             // 
-            this.button10.Location = new System.Drawing.Point(34, 85);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 23);
-            this.button10.TabIndex = 37;
-            this.button10.Text = "Thêm";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_ThemGhe.Location = new System.Drawing.Point(34, 85);
+            this.btn_ThemGhe.Name = "btn_ThemGhe";
+            this.btn_ThemGhe.Size = new System.Drawing.Size(75, 23);
+            this.btn_ThemGhe.TabIndex = 37;
+            this.btn_ThemGhe.Text = "Thêm";
+            this.btn_ThemGhe.UseVisualStyleBackColor = true;
+            this.btn_ThemGhe.Click += new System.EventHandler(this.button10_Click);
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dataGridView2);
+            this.panel4.Controls.Add(this.dgvGhe);
             this.panel4.Location = new System.Drawing.Point(1, 114);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(768, 275);
             this.panel4.TabIndex = 35;
             // 
-            // dataGridView2
+            // dgvGhe
             // 
-            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvGhe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(771, 275);
-            this.dataGridView2.TabIndex = 0;
+            this.dgvGhe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGhe.Location = new System.Drawing.Point(0, 0);
+            this.dgvGhe.Name = "dgvGhe";
+            this.dgvGhe.RowHeadersWidth = 51;
+            this.dgvGhe.RowTemplate.Height = 24;
+            this.dgvGhe.Size = new System.Drawing.Size(771, 275);
+            this.dgvGhe.TabIndex = 0;
+            this.dgvGhe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGhe_CellContentClick);
             // 
             // tabVe
             // 
+            this.tabVe.Controls.Add(this.cbMaGhe);
             this.tabVe.Controls.Add(this.button11);
             this.tabVe.Controls.Add(this.comboBox3);
-            this.tabVe.Controls.Add(this.textBox5);
-            this.tabVe.Controls.Add(this.textBox6);
-            this.tabVe.Controls.Add(this.textBox7);
-            this.tabVe.Controls.Add(this.label17);
             this.tabVe.Controls.Add(this.label18);
             this.tabVe.Controls.Add(this.label19);
-            this.tabVe.Controls.Add(this.label20);
             this.tabVe.Controls.Add(this.button12);
             this.tabVe.Controls.Add(this.button13);
             this.tabVe.Controls.Add(this.button14);
@@ -851,67 +850,28 @@
             // comboBox3
             // 
             this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(494, 35);
+            this.comboBox3.Location = new System.Drawing.Point(494, 24);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 61;
             // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(494, 8);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(169, 22);
-            this.textBox5.TabIndex = 60;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(154, 38);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(156, 22);
-            this.textBox6.TabIndex = 59;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(154, 8);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(156, 22);
-            this.textBox7.TabIndex = 58;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(387, 11);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(101, 16);
-            this.label17.TabIndex = 57;
-            this.label17.Text = "Trạng Thái Ghế";
-            // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(387, 38);
+            this.label18.Location = new System.Drawing.Point(387, 27);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(55, 16);
+            this.label18.Size = new System.Drawing.Size(62, 16);
             this.label18.TabIndex = 56;
-            this.label18.Text = "Mã Rạp";
+            this.label18.Text = "Mã Show";
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(80, 41);
+            this.label19.Location = new System.Drawing.Point(80, 30);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(54, 16);
             this.label19.TabIndex = 55;
             this.label19.Text = "Mã Ghế";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(80, 11);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 16);
-            this.label20.TabIndex = 50;
-            this.label20.Text = "Mã Phòng";
             // 
             // button12
             // 
@@ -951,24 +911,25 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.dataGridView3);
+            this.panel5.Controls.Add(this.dgvVe);
             this.panel5.Location = new System.Drawing.Point(1, 114);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(768, 275);
             this.panel5.TabIndex = 49;
             // 
-            // dataGridView3
+            // dgvVe
             // 
-            this.dataGridView3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvVe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(771, 275);
-            this.dataGridView3.TabIndex = 0;
+            this.dgvVe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVe.Location = new System.Drawing.Point(0, 0);
+            this.dgvVe.Name = "dgvVe";
+            this.dgvVe.RowHeadersWidth = 51;
+            this.dgvVe.RowTemplate.Height = 24;
+            this.dgvVe.Size = new System.Drawing.Size(771, 275);
+            this.dgvVe.TabIndex = 0;
+            this.dgvVe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVe_CellContentClick);
             // 
             // errorSDT
             // 
@@ -998,15 +959,25 @@
             // 
             this.errorMaRapP.ContainerControl = this;
             // 
-            // btnInRap
+            // cbTrangThaiGhe
             // 
-            this.btnInRap.Location = new System.Drawing.Point(666, 93);
-            this.btnInRap.Name = "btnInRap";
-            this.btnInRap.Size = new System.Drawing.Size(75, 23);
-            this.btnInRap.TabIndex = 17;
-            this.btnInRap.Text = "In";
-            this.btnInRap.UseVisualStyleBackColor = true;
-            this.btnInRap.Click += new System.EventHandler(this.btnInRap_Click);
+            this.cbTrangThaiGhe.FormattingEnabled = true;
+            this.cbTrangThaiGhe.Items.AddRange(new object[] {
+            "Trống",
+            "Đã đặt",
+            "Hỏng"});
+            this.cbTrangThaiGhe.Location = new System.Drawing.Point(495, 5);
+            this.cbTrangThaiGhe.Name = "cbTrangThaiGhe";
+            this.cbTrangThaiGhe.Size = new System.Drawing.Size(121, 24);
+            this.cbTrangThaiGhe.TabIndex = 50;
+            // 
+            // cbMaGhe
+            // 
+            this.cbMaGhe.FormattingEnabled = true;
+            this.cbMaGhe.Location = new System.Drawing.Point(156, 23);
+            this.cbMaGhe.Name = "cbMaGhe";
+            this.cbMaGhe.Size = new System.Drawing.Size(121, 24);
+            this.cbMaGhe.TabIndex = 63;
             // 
             // FrmRap
             // 
@@ -1030,15 +1001,15 @@
             this.tabGioChieu.ResumeLayout(false);
             this.tabGioChieu.PerformLayout();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGioChieu)).EndInit();
             this.tabGhe.ResumeLayout(false);
             this.tabGhe.PerformLayout();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGhe)).EndInit();
             this.tabVe.ResumeLayout(false);
             this.tabVe.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSDT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorSoPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorTongGheR)).EndInit();
@@ -1099,24 +1070,23 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.ComboBox cbMaRap;
         private System.Windows.Forms.Button btnResetPhong;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker timeGC;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbMaRapGC;
+        private System.Windows.Forms.TextBox tbMaGioChieu;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btn_ThemGC;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvGioChieu;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox cbMaRapGhe;
+        private System.Windows.Forms.TextBox tbMaGhe;
+        private System.Windows.Forms.TextBox tbMaPhongGhe;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -1124,24 +1094,21 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btn_ThemGhe;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgvGhe;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgvVe;
         private System.Windows.Forms.Button btnInRap;
+        private System.Windows.Forms.ComboBox cbTrangThaiGhe;
+        private System.Windows.Forms.ComboBox cbMaGhe;
     }
 }
